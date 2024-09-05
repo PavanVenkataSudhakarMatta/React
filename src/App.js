@@ -1,33 +1,33 @@
 import "./App.css";
-// import Header from './components/header/Header';
-import User from "./components/user/User";
+import Menu from "./components/menu/Menu"
+import Course from "./components/course/Course"
+
 
 function App() {
   let data = "Full Stack Java Course";
-  let users = [
-    { id: 1, name: "pavan", age: 32, location: "Hyderabad" },
-    { id: 2, name: "pavan1", age: 33, location: "MTM" },
-    { id: 3, name: "pavan2", age: 34, location: "Banglore" },
-    { id: 4, name: "pavan3", age: 35, location: "Chennai" },
-    { id: 5, name: "pavan4", age: 36, location: "Pune" },
-  ];
+ 
+  let courses = [
+    {id:1, name:"Java", fee:"25000"},
+    {id:2, name:"Angular", fee:"15000"},
+    {id:3, name:"React", fee:"10000"}
+  ]
 
   return (
     <>
-      {users.map((user) => {
-        return (
-          <User
-            id={user.id}
-            name={user.name}
-            age={user.age}
-            location={user.location}
-          >
-            PavanMano
-          </User>
-        );
-      })}
+      
+      {
+       courses.map(
+        (c) => {
+          return <Course key={c.id} id={c.id} name={c.name} fee={c.fee} >  
+         <h1>This is Coding Hub </h1> 
+          </Course>
+        }
+       )
+      }
 
-      {/* <Header></Header> */}
+       {/* <Menu/>   */}
+       {/* <Menu></Menu>
+       { Menu()} */}
       <h1 className="App text-primary m-5">Coding Hub</h1>
       <h2>Way to a better future</h2>
       <h3>{data}</h3>
@@ -40,7 +40,7 @@ function App() {
   );
 }
 
-function sum(x, y) {
+export function sum(x, y) {
   return x + y;
 }
 
