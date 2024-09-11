@@ -1,0 +1,9 @@
+ul {
+    display: flex;
+    /* justify-content: space-evenly; */
+    gap:20px;
+    list-style: none;
+    color: white;
+    background-color: red;
+    padding: 10px;
+}
