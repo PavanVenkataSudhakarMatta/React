@@ -45,6 +45,7 @@ let a = {
        <Link to="/">Home</Link> 
        <Link to="/about">About Us</Link> 
        <Link to="/contact">Contact Us</Link> 
+       <Link to="/course">Course</Link> 
        <Link to="about/career">Career</Link> 
 
        {/* <li to="about/career">Career</li> */}
